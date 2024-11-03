@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="//fonts.googleapis.com/css?family=Josefin+Sans:300,400,600,700" rel="stylesheet">
+    <style>
+        /* Ensure the body takes the full height of the viewport */
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+
+        /* Main content area */
+        .main-content {
+            min-height: calc(100vh - 64px); /* Adjust for navbar height */
+            padding-bottom: 60px; /* Space for footer */
+        }
+
+        /* Fixed footer styles */
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <%- include('./partials/header') %>
+
+
+    <div class="container main-content">
+        <h2>Get in Touch</h2>
+        <form action="#" method="post">
+            <div class="input-field">
+                <input type="text" id="name" name="name" required>
+                <label for="name">Your Name</label>
+            </div>
+            <div class="input-field">
+                <input type="email" id="email" name="email" required>
+                <label for="email">Your Email</label>
+            </div>
+            <div class="input-field">
+                <input type="text" id="subject" name="subject" required>
+                <label for="subject">Subject</label>
+            </div>
+            <div class="input-field">
+                <textarea id="message" name="message" class="materialize-textarea" required></textarea>
+                <label for="message">Your Message</label>
+            </div>
+            <button type="submit" class="btn blue">Send Message</button>
+        </form>
+    </div>
+
+    <footer class="page-footer blue lighten-1">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">Contact Information</h5>
+                    <p class="grey-text text-lighten-4">Email: info@example.com</p>
+                    <p class="grey-text text-lighten-4">Phone: (123) 456-7890</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('.sidenav');
+            var instances = M.Sidenav.init(elems);
+        });
+    </script>
+</body>
+</html>
